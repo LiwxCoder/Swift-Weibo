@@ -1,0 +1,2 @@
+# Swift-Weibo
+使用Swift仿新浪微博.使用iOS9最新技术Storyboard References引用技术搭建项目框架
