@@ -15,7 +15,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // 设置全局颜色
+        UITabBar.appearance().tintColor = UIColor.orangeColor()
+        
+        // 1.创建window
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        window?.backgroundColor = UIColor.redColor()
+        // 2.设置根控制器
+        window?.rootViewController = MainViewController()
+        // 3.设置keyWindow并显示
+        window?.makeKeyAndVisible()
+        
         return true
     }
 
