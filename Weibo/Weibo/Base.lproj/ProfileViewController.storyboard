@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Dbt-lM-DlP">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--我-->
+        <scene sceneID="GKm-MU-NNj">
+            <objects>
+                <tableViewController id="EyC-Cy-BUz" customClass="ProfileViewController" customModule="Weibo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="wHY-Rh-pQL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="so9-Pz-2w3">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="so9-Pz-2w3" id="2w0-qf-C6f">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="EyC-Cy-BUz" id="Tcz-r5-ASc"/>
+                            <outlet property="delegate" destination="EyC-Cy-BUz" id="weg-3L-Mfz"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="我" id="NaS-Vj-Qas"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYl-Jb-VN7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2378" y="3066"/>
+        </scene>
+        <!--我-->
+        <scene sceneID="Bke-zL-BNs">
+            <objects>
+                <navigationController id="Dbt-lM-DlP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="我" image="tabbar_profile" selectedImage="tabbar_profile_highlighted" id="1DB-2M-AM1"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CHa-VJ-4gU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="EyC-Cy-BUz" kind="relationship" relationship="rootViewController" id="7lR-QA-hgB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="62K-8U-Qxb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1562" y="3066"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tabbar_profile" width="30" height="30"/>
+        <image name="tabbar_profile_highlighted" width="30" height="30"/>
+    </resources>
+</document>

@@ -16,29 +16,30 @@ class MainViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         // --------------------------------------------------------------------
         // 1.添加子控制器
-        addChildViewController(HomeViewController(), title: "首页", imageName: "tabbar_home")
-        addChildViewController(HomeViewController(), title: "消息", imageName: "tabbar_message_center")
-        addChildViewController(HomeViewController(), title: "发现", imageName: "tabbar_discover")
-        addChildViewController(HomeViewController(), title: "我", imageName: "tabbar_profile")
+//        addChildViewController(HomeViewController(), title: "首页", imageName: "tabbar_home")
+//        addChildViewController(HomeViewController(), title: "消息", imageName: "tabbar_message_center")
+//        addChildViewController(HomeViewController(), title: "发现", imageName: "tabbar_discover")
+//        addChildViewController(HomeViewController(), title: "我", imageName: "tabbar_profile")
     
     }
     
-    func addChildViewController(childViewController: UIViewController, title: String, imageName: String) {
-        
-        // --------------------------------------------------------------------
-        // 1.将childViewController包装到导航控制器
-        let childNav = UINavigationController(rootViewController: childViewController)
-        
-        // 2.设置标题和图片
-        childViewController.title = title                   // 设置导航栏和tabBarButton的标题
-        childViewController.tabBarItem.image = UIImage(named: imageName)
-        childViewController.tabBarItem.selectedImage = UIImage(named: imageName + "_highlighted")
-        
-        // 3.添加子控制器
-        addChildViewController(childNav)
-    }
+//    func addChildViewController(childViewController: UIViewController, title: String, imageName: String) {
+//        
+//        // --------------------------------------------------------------------
+//        // 1.将childViewController包装到导航控制器
+//        let childNav = UINavigationController(rootViewController: childViewController)
+//        
+//        // 2.设置标题和图片
+//        childViewController.title = title                   // 设置导航栏和tabBarButton的标题
+//        childViewController.tabBarItem.image = UIImage(named: imageName)
+//        childViewController.tabBarItem.selectedImage = UIImage(named: imageName + "_highlighted")
+//        
+//        // 3.添加子控制器
+//        addChildViewController(childNav)
+//    }
     
     
     

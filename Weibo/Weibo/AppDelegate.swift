@@ -19,13 +19,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // 设置全局颜色
         UITabBar.appearance().tintColor = UIColor.orangeColor()
         
-        // 1.创建window
-        window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        window?.backgroundColor = UIColor.redColor()
-        // 2.设置根控制器
-        window?.rootViewController = MainViewController()
-        // 3.设置keyWindow并显示
-        window?.makeKeyAndVisible()
+//        // 1.创建window
+//        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+//        window?.backgroundColor = UIColor.redColor()
+//        // 2.设置根控制器
+//        window?.rootViewController = MainViewController()
+//        // 3.设置keyWindow并显示
+//        window?.makeKeyAndVisible()
         
         return true
     }
@@ -53,5 +53,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+}
+
+// ----------------------------------------------------------------------------
+// 自定义Log
+// 1.Swift中可以定义全局函数
+// 2.使用泛型  WXLog<T>(message : T 表示传递的是什么类型,message就是什么类型
+func WXLog<T>(message: T, file: String = __FILE__, funcName: String = __FUNCTION__, lineNum: Int = __LINE__) {
+    
+    // 1.获取文件名,包含后缀名
+    let name = (file as NSString).lastPathComponent
+    
+    // 1.1 切割文件名和后缀名
+    let fileArray = name.componentsSeparatedByString(".")
+    // 1.2 获取文件名
+    let fileName = fileArray[0]
+    
+    // 2.打印内容
+    print("[\(fileName) \(funcName)](\(lineNum)): \(message)")
+    
 }
 

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D957970E1C82AE0600E009E7 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D957970C1C82AE0600E009E7 /* HomeViewController.storyboard */; };
+		D95797111C82AE3700E009E7 /* MessageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D957970F1C82AE3700E009E7 /* MessageViewController.storyboard */; };
+		D95797141C82AE7000E009E7 /* Null.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D95797121C82AE7000E009E7 /* Null.storyboard */; };
+		D95797171C82AE9D00E009E7 /* DiscoverViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D95797151C82AE9D00E009E7 /* DiscoverViewController.storyboard */; };
+		D957971A1C82AEC100E009E7 /* ProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D95797181C82AEC100E009E7 /* ProfileViewController.storyboard */; };
 		D99974A91C81B348005B0DE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99974A81C81B348005B0DE7 /* AppDelegate.swift */; };
 		D99974AE1C81B348005B0DE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D99974AC1C81B348005B0DE7 /* Main.storyboard */; };
 		D99974B01C81B348005B0DE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D99974AF1C81B348005B0DE7 /* Assets.xcassets */; };
@@ -19,6 +24,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D957970D1C82AE0600E009E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/HomeViewController.storyboard; sourceTree = "<group>"; };
+		D95797101C82AE3700E009E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MessageViewController.storyboard; sourceTree = "<group>"; };
+		D95797131C82AE7000E009E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Null.storyboard; sourceTree = "<group>"; };
+		D95797161C82AE9D00E009E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/DiscoverViewController.storyboard; sourceTree = "<group>"; };
+		D95797191C82AEC100E009E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ProfileViewController.storyboard; sourceTree = "<group>"; };
 		D99974A51C81B348005B0DE7 /* Weibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D99974A81C81B348005B0DE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D99974AD1C81B348005B0DE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -89,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				D99974C71C81C4DD005B0DE7 /* DiscoverViewController.swift */,
+				D95797151C82AE9D00E009E7 /* DiscoverViewController.storyboard */,
 			);
 			path = "Discover(发现)";
 			sourceTree = "<group>";
@@ -97,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				D99974CB1C81C50C005B0DE7 /* HomeViewController.swift */,
+				D957970C1C82AE0600E009E7 /* HomeViewController.storyboard */,
 			);
 			path = "Home(首页)";
 			sourceTree = "<group>";
@@ -105,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				D99974C11C81B78A005B0DE7 /* MainViewController.swift */,
+				D95797121C82AE7000E009E7 /* Null.storyboard */,
 			);
 			path = "Main(主要)";
 			sourceTree = "<group>";
@@ -113,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				D99974C51C81C4C8005B0DE7 /* MessageViewController.swift */,
+				D957970F1C82AE3700E009E7 /* MessageViewController.storyboard */,
 			);
 			path = "Message(消息)";
 			sourceTree = "<group>";
@@ -121,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				D99974C91C81C4EB005B0DE7 /* ProfileViewController.swift */,
+				D95797181C82AEC100E009E7 /* ProfileViewController.storyboard */,
 			);
 			path = "Profile(我)";
 			sourceTree = "<group>";
@@ -191,9 +206,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D95797111C82AE3700E009E7 /* MessageViewController.storyboard in Resources */,
+				D95797171C82AE9D00E009E7 /* DiscoverViewController.storyboard in Resources */,
+				D957970E1C82AE0600E009E7 /* HomeViewController.storyboard in Resources */,
 				D99974B31C81B348005B0DE7 /* LaunchScreen.storyboard in Resources */,
 				D99974B01C81B348005B0DE7 /* Assets.xcassets in Resources */,
 				D99974AE1C81B348005B0DE7 /* Main.storyboard in Resources */,
+				D957971A1C82AEC100E009E7 /* ProfileViewController.storyboard in Resources */,
+				D95797141C82AE7000E009E7 /* Null.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +236,51 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		D957970C1C82AE0600E009E7 /* HomeViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D957970D1C82AE0600E009E7 /* Base */,
+			);
+			name = HomeViewController.storyboard;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		D957970F1C82AE3700E009E7 /* MessageViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D95797101C82AE3700E009E7 /* Base */,
+			);
+			name = MessageViewController.storyboard;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		D95797121C82AE7000E009E7 /* Null.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D95797131C82AE7000E009E7 /* Base */,
+			);
+			name = Null.storyboard;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		D95797151C82AE9D00E009E7 /* DiscoverViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D95797161C82AE9D00E009E7 /* Base */,
+			);
+			name = DiscoverViewController.storyboard;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		D95797181C82AEC100E009E7 /* ProfileViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D95797191C82AEC100E009E7 /* Base */,
+			);
+			name = ProfileViewController.storyboard;
+			path = ../..;
+			sourceTree = "<group>";
+		};
 		D99974AC1C81B348005B0DE7 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -361,6 +426,7 @@
 				D99974B91C81B348005B0DE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

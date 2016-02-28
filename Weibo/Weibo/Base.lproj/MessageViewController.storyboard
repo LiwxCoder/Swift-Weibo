@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ghR-vI-pRE">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--消息-->
+        <scene sceneID="6FS-Dd-bNm">
+            <objects>
+                <tableViewController id="npu-mP-gJ0" customClass="MessageViewController" customModule="Weibo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="K97-f2-FpR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="PAT-57-ivh">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PAT-57-ivh" id="0WX-S4-Rwk">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="npu-mP-gJ0" id="I2O-Bq-SS0"/>
+                            <outlet property="delegate" destination="npu-mP-gJ0" id="AbA-6e-51g"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="消息" id="9O8-cq-e0X"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SmJ-XW-qTW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2322" y="730"/>
+        </scene>
+        <!--消息-->
+        <scene sceneID="FLC-y2-bbD">
+            <objects>
+                <navigationController id="ghR-vI-pRE" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="消息" image="tabbar_message_center" selectedImage="tabbar_message_center_highlighted" id="cjr-Pq-K5h"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mua-sh-hyU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="npu-mP-gJ0" kind="relationship" relationship="rootViewController" id="Y5a-lU-9WW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cbN-30-7T0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1506" y="730"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tabbar_message_center" width="30" height="30"/>
+        <image name="tabbar_message_center_highlighted" width="30" height="30"/>
+    </resources>
+</document>
