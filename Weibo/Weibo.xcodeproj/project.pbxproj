@@ -26,6 +26,7 @@
 		D99974CA1C81C4EB005B0DE7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99974C91C81C4EB005B0DE7 /* ProfileViewController.swift */; };
 		D99974CC1C81C50C005B0DE7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99974CB1C81C50C005B0DE7 /* HomeViewController.swift */; };
 		D9B709921C832BF100D46B42 /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B709911C832BF100D46B42 /* UIBarButtonItem-Extension.swift */; };
+		D9B709941C83386600D46B42 /* TitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B709931C83386600D46B42 /* TitleButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		D99974C91C81C4EB005B0DE7 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D99974CB1C81C50C005B0DE7 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D9B709911C832BF100D46B42 /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
+		D9B709931C83386600D46B42 /* TitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 			children = (
 				D99974CB1C81C50C005B0DE7 /* HomeViewController.swift */,
 				D957970C1C82AE0600E009E7 /* HomeViewController.storyboard */,
+				D9B709931C83386600D46B42 /* TitleButton.swift */,
 			);
 			path = "Home(首页)";
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				D99974CA1C81C4EB005B0DE7 /* ProfileViewController.swift in Sources */,
 				D90D81371C82B50E0011F081 /* UIButton-Extension.swift in Sources */,
 				D99974A91C81B348005B0DE7 /* AppDelegate.swift in Sources */,
+				D9B709941C83386600D46B42 /* TitleButton.swift in Sources */,
 				D99974C61C81C4C8005B0DE7 /* MessageViewController.swift in Sources */,
 				D99974C21C81B78A005B0DE7 /* MainViewController.swift in Sources */,
 				D90BF3451C83012300EE66BD /* BaseViewController.swift in Sources */,

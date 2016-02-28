@@ -36,6 +36,11 @@ class HomeViewController: BaseViewController {
         
         // 2.创建右侧按钮
         navigationItem.rightBarButtonItem = UIBarButtonItem(imageName: "navigationbar_pop", target: self, action: "rightItemClick")
+        
+        // 3.设置标题按钮
+        let titleButton = TitleButton()
+        titleButton.addTarget(self, action: "titleButtonClick:", forControlEvents: .TouchUpInside)
+        navigationItem.titleView = titleButton
     }
     
     // MARK: ======================================================================
@@ -49,6 +54,10 @@ class HomeViewController: BaseViewController {
     /// 监听导航栏右侧按钮的点击
     @objc private func rightItemClick() {
         WXLog("rightItemClick")
+    }
+    
+    @objc private func titleButtonClick(titleButton: TitleButton) {
+        titleButton.selected = !titleButton.selected
     }
     
     
