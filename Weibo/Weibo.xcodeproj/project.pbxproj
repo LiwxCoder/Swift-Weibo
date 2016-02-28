@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D90BF3451C83012300EE66BD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90BF3441C83012300EE66BD /* BaseViewController.swift */; };
+		D90BF3471C83032B00EE66BD /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90BF3461C83032B00EE66BD /* VisitorView.swift */; };
+		D90BF3491C83033900EE66BD /* VisitorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90BF3481C83033900EE66BD /* VisitorView.xib */; };
 		D90D81371C82B50E0011F081 /* UIButton-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90D81361C82B50E0011F081 /* UIButton-Extension.swift */; };
 		D957970E1C82AE0600E009E7 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D957970C1C82AE0600E009E7 /* HomeViewController.storyboard */; };
 		D95797111C82AE3700E009E7 /* MessageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D957970F1C82AE3700E009E7 /* MessageViewController.storyboard */; };
@@ -25,6 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D90BF3441C83012300EE66BD /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		D90BF3461C83032B00EE66BD /* VisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
+		D90BF3481C83033900EE66BD /* VisitorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VisitorView.xib; sourceTree = "<group>"; };
 		D90D81361C82B50E0011F081 /* UIButton-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton-Extension.swift"; sourceTree = "<group>"; };
 		D957970D1C82AE0600E009E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/HomeViewController.storyboard; sourceTree = "<group>"; };
 		D95797101C82AE3700E009E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MessageViewController.storyboard; sourceTree = "<group>"; };
@@ -55,6 +61,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D90BF3431C8300FE00EE66BD /* Visitor */ = {
+			isa = PBXGroup;
+			children = (
+				D90BF3441C83012300EE66BD /* BaseViewController.swift */,
+				D90BF3461C83032B00EE66BD /* VisitorView.swift */,
+				D90BF3481C83033900EE66BD /* VisitorView.xib */,
+			);
+			path = Visitor;
+			sourceTree = "<group>";
+		};
 		D90D81331C82B45E0011F081 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +141,7 @@
 		D99974BD1C81B3C3005B0DE7 /* Main(主要) */ = {
 			isa = PBXGroup;
 			children = (
+				D90BF3431C8300FE00EE66BD /* Visitor */,
 				D99974C11C81B78A005B0DE7 /* MainViewController.swift */,
 				D99974AC1C81B348005B0DE7 /* Main.storyboard */,
 				D95797121C82AE7000E009E7 /* Null.storyboard */,
@@ -225,6 +242,7 @@
 				D99974AE1C81B348005B0DE7 /* Main.storyboard in Resources */,
 				D957971A1C82AEC100E009E7 /* ProfileViewController.storyboard in Resources */,
 				D95797141C82AE7000E009E7 /* Null.storyboard in Resources */,
+				D90BF3491C83033900EE66BD /* VisitorView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +258,8 @@
 				D99974A91C81B348005B0DE7 /* AppDelegate.swift in Sources */,
 				D99974C61C81C4C8005B0DE7 /* MessageViewController.swift in Sources */,
 				D99974C21C81B78A005B0DE7 /* MainViewController.swift in Sources */,
+				D90BF3451C83012300EE66BD /* BaseViewController.swift in Sources */,
+				D90BF3471C83032B00EE66BD /* VisitorView.swift in Sources */,
 				D99974C81C81C4DD005B0DE7 /* DiscoverViewController.swift in Sources */,
 				D99974CC1C81C50C005B0DE7 /* HomeViewController.swift in Sources */,
 			);

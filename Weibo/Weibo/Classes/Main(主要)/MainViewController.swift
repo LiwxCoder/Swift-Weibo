@@ -70,15 +70,6 @@ class MainViewController: UITabBarController {
         }
     }
     
-    
-    // MARK: ======================================================================
-    // MARK: - Private method (业务和逻辑功能相关)
-    
-    
-    // MARK: ======================================================================
-    // MARK: - Delegate (代理实现)
-    
-    
     // MARK: ======================================================================
     // MARK: - Event response (事件处理)
     
@@ -89,12 +80,6 @@ class MainViewController: UITabBarController {
     @objc private func composeBtnClick(composeBtn: UIButton) {
         WXLog("composeBtnClick");
     }
-    
-    
-    // MARK: ======================================================================
-    // MARK: - Interface (接口)
-    
-    
     
     
 }
