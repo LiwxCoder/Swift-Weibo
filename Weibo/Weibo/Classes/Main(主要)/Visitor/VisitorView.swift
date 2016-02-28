@@ -29,12 +29,15 @@ class VisitorView: UIView {
     
     // MARK: ======================================================================
     // MARK: - Interface (接口)
+    
+    /// 设置访客视图的图标和显示文字
     func setupVisitorInfo(iconName: String, hintText: String) {
         iconView.image = UIImage(named: iconName)
         hintLabel.text = hintText
         rotationView.hidden = true
     }
     
+    /// 添加转盘动画
     func addRotationAnimation() {
         
         // 1.创建动画

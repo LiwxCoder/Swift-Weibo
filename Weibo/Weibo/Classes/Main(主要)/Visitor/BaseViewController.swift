@@ -13,9 +13,13 @@ class BaseViewController: UITableViewController {
     // MARK: ======================================================================
     // MARK: - Property (懒加载,属性监听)
     /// 登录状态
-    var isLogin = false
+    var isLogin = true
     var visitorView : VisitorView?
     
+    // MARK: ======================================================================
+    // MARK: - Life cycle (生命周期，类似addSubview和Notification的监听和销毁都放在这里)
+    
+    /// 加载view
     override func loadView() {
         
         isLogin ? super.loadView() : setupVisitorView()
@@ -24,6 +28,12 @@ class BaseViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    
+    /// 设置导航条注册,登录按钮
+    func setupVisitorNavigationItems() {
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "注册", style: .Done, target: self, action: "registerClick")
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "登录", style: .Done, target: self, action: "loginClick")
     }
     
     /// 初始化访客视图
