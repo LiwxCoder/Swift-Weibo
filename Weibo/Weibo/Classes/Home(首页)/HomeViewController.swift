@@ -79,5 +79,45 @@ class HomeViewController: BaseViewController {
 
 
 extension HomeViewController : UIViewControllerTransitioningDelegate {
+    
+    func presentationControllerForPresentedViewController(presented: UIViewController, presentingViewController presenting: UIViewController, sourceViewController source: UIViewController) -> UIPresentationController? {
+        // 返回: UIPresentationController : 决定弹出的View长什么样子
+        // presented: 发起控制器
+        // presenting: modal出来的控制器
+        
+        let presentationController = WXPresentationController(presentedViewController: presented, presentingViewController: presenting)
+        presentationController.presentedFrame = CGRect(x: 100, y: 60, width: 180, height: 250)
+        
+        return presentationController
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 }
