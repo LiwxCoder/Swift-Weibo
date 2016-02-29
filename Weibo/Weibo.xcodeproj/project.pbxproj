@@ -30,6 +30,7 @@
 		D9C9D1E81C843A8C008BDCA3 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9D1E61C843A8C008BDCA3 /* PopoverViewController.swift */; };
 		D9C9D1E91C843A8C008BDCA3 /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9C9D1E71C843A8C008BDCA3 /* PopoverViewController.xib */; };
 		D9C9D1EB1C84421A008BDCA3 /* WXPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9D1EA1C84421A008BDCA3 /* WXPresentationController.swift */; };
+		D9C9D1ED1C844FF9008BDCA3 /* WXPopoverAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9D1EC1C844FF9008BDCA3 /* WXPopoverAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		D9C9D1E61C843A8C008BDCA3 /* PopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
 		D9C9D1E71C843A8C008BDCA3 /* PopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopoverViewController.xib; sourceTree = "<group>"; };
 		D9C9D1EA1C84421A008BDCA3 /* WXPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WXPresentationController.swift; sourceTree = "<group>"; };
+		D9C9D1EC1C844FF9008BDCA3 /* WXPopoverAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WXPopoverAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +196,7 @@
 				D9C9D1E61C843A8C008BDCA3 /* PopoverViewController.swift */,
 				D9C9D1E71C843A8C008BDCA3 /* PopoverViewController.xib */,
 				D9C9D1EA1C84421A008BDCA3 /* WXPresentationController.swift */,
+				D9C9D1EC1C844FF9008BDCA3 /* WXPopoverAnimator.swift */,
 			);
 			path = UIPopover;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9B709921C832BF100D46B42 /* UIBarButtonItem-Extension.swift in Sources */,
+				D9C9D1ED1C844FF9008BDCA3 /* WXPopoverAnimator.swift in Sources */,
 				D99974CA1C81C4EB005B0DE7 /* ProfileViewController.swift in Sources */,
 				D90D81371C82B50E0011F081 /* UIButton-Extension.swift in Sources */,
 				D99974A91C81B348005B0DE7 /* AppDelegate.swift in Sources */,
