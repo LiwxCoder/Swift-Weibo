@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class OAuthViewController: UIViewController {
 
@@ -17,6 +18,9 @@ class OAuthViewController: UIViewController {
     @IBOutlet weak var webView: UIWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // 0.设置webView的代理
+        webView.delegate = self
 
         // 1.设置导航栏内容
         setupNavigationItems()
@@ -71,4 +75,67 @@ class OAuthViewController: UIViewController {
     }
     
 
+}
+
+// MARK: ======================================================================
+// MARK: - Delegate (代理实现)
+
+// MARK: ---- webView的代理方法
+extension OAuthViewController : UIWebViewDelegate {
+    
+    /// 开始加载某个页面会调用该方法
+    func webViewDidStartLoad(webView: UIWebView) {
+        SVProgressHUD.showWithStatus("正在拼命加载界面")
+    }
+    
+    /// 完成加载某个页面会调用该方法
+    func webViewDidFinishLoad(webView: UIWebView) {
+        // 加载完成,隐藏指示器
+        SVProgressHUD.dismiss()
+    }
+    
+    /// 加载某个页面失败时会调用该方法
+    func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
+        // 加载失败,隐藏指示器
+        SVProgressHUD.dismiss()
+    }
+    
+    /// 开始加载某个request请求对象会先调用该方法
+    // 返回值: true: 需要继续加载该request  false: 不需要继续加载该request
+    func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+        
+        // 1.获取加载的URL对应的字符串,判断是否有获取到对应的URLString
+        guard let urlString = request.URL?.absoluteString else {
+            WXLog("没有获取到对应的URLString")
+            return true
+        }
+        
+        // 2.判断该urlString是否包含code
+        guard urlString.containsString("code=") else {
+            WXLog("还没有加载到code,继续加载界面")
+            return true
+        }
+        
+        // 3.获取code
+        guard let code = urlString.componentsSeparatedByString("code=").last else {
+            WXLog("获取code失败")
+            return true
+        }
+        
+        // 4.用code换取accessToken
+        NetworkTools.shareInstance.loadAccessToken(code) { (result, error) -> () in
+            
+            // 1.判断是否请求失败
+            if error != nil {
+                WXLog(error)
+                return
+            }
+            
+            // 2.获取到授权信息
+            WXLog(result)
+            
+        }
+        
+        return false
+    }
 }
