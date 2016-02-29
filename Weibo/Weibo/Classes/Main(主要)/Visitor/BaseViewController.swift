@@ -13,7 +13,7 @@ class BaseViewController: UITableViewController {
     // MARK: ======================================================================
     // MARK: - Property (懒加载,属性监听)
     /// 登录状态
-    var isLogin = true
+    var isLogin = false
     var visitorView : VisitorView?
     
     // MARK: ======================================================================
@@ -55,7 +55,15 @@ class BaseViewController: UITableViewController {
     }
     
     @objc private func loginClick() {
-        print("loginClick")
+       
+        // 1.弹出授权控制器
+        let oauthVc = OAuthViewController()
+        
+        // 2.包装导航控制器
+        let navVc: UINavigationController = UINavigationController(rootViewController: oauthVc)
+        
+        // 3.弹出控制器
+        presentViewController(navVc, animated: true, completion: nil)
     }
 
 
