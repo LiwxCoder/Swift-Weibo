@@ -58,10 +58,26 @@ class HomeViewController: BaseViewController {
     
     @objc private func titleButtonClick(titleButton: TitleButton) {
         titleButton.selected = !titleButton.selected
+        
+        // 1.创建PopoverVc
+        let popoverVc = PopoverViewController()
+        
+        // 2.设置PopoverVc的Modal弹出样式为自定义样式
+        // 默认情况下modal出一个控制器后,会将之前显示的控制器移除掉
+        // 如果不希望移除控制器,可以将modalPresentationStyle设置为自定义样式
+        popoverVc.modalPresentationStyle = .Custom
+        
+        // 3.自定义Modal,需要设置转场的代理
+        popoverVc.transitioningDelegate = self
+        
+        // 4.使用Modal方式弹出PopoverViewController控制器
+        presentViewController(popoverVc, animated: true, completion: nil)
     }
     
-    
-    
-    
+}
+
+
+
+extension HomeViewController : UIViewControllerTransitioningDelegate {
 
 }
