@@ -76,3 +76,24 @@ extension NetworkTools {
     }
 }
 
+/// 请求用户的信息
+extension NetworkTools {
+
+    // 请求用户信息
+    func loadUserInfo(access_token: String, uid: String, finished: (result: [String : AnyObject]?, error: NSError?) -> ()) {
+    
+        // 1.获取URLString
+        let urlString = "2/users/show.json"
+        
+        // 2.拼接参数
+        let parameters = ["access_token" : access_token, "uid" : uid]
+        
+        // 3.发送请求
+        request(.GET, urlString: urlString, parameters: parameters) { (result, error) -> () in
+            finished(result: result as? [String : AnyObject], error: error)
+        }
+        
+        
+    }
+}
+

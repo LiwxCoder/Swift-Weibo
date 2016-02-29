@@ -32,6 +32,7 @@
 		D9BEF48A1C8457EB00DBD3DB /* OAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9BEF4881C8457EB00DBD3DB /* OAuthViewController.xib */; };
 		D9BEF48C1C845CB700DBD3DB /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BEF48B1C845CB700DBD3DB /* Common.swift */; };
 		D9BEF48F1C8473FC00DBD3DB /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BEF48E1C8473FC00DBD3DB /* NetworkTools.swift */; };
+		D9BEF4911C848DF400DBD3DB /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BEF4901C848DF400DBD3DB /* UserAccount.swift */; };
 		D9C9D1E81C843A8C008BDCA3 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9D1E61C843A8C008BDCA3 /* PopoverViewController.swift */; };
 		D9C9D1E91C843A8C008BDCA3 /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9C9D1E71C843A8C008BDCA3 /* PopoverViewController.xib */; };
 		D9C9D1EB1C84421A008BDCA3 /* WXPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9D1EA1C84421A008BDCA3 /* WXPresentationController.swift */; };
@@ -68,6 +69,7 @@
 		D9BEF4881C8457EB00DBD3DB /* OAuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OAuthViewController.xib; sourceTree = "<group>"; };
 		D9BEF48B1C845CB700DBD3DB /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		D9BEF48E1C8473FC00DBD3DB /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
+		D9BEF4901C848DF400DBD3DB /* UserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
 		D9C9D1E61C843A8C008BDCA3 /* PopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
 		D9C9D1E71C843A8C008BDCA3 /* PopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopoverViewController.xib; sourceTree = "<group>"; };
 		D9C9D1EA1C84421A008BDCA3 /* WXPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WXPresentationController.swift; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 			children = (
 				D9BEF4871C8457EB00DBD3DB /* OAuthViewController.swift */,
 				D9BEF4881C8457EB00DBD3DB /* OAuthViewController.xib */,
+				D9BEF4901C848DF400DBD3DB /* UserAccount.swift */,
 			);
 			path = "OAuth(授权)";
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 			files = (
 				D9BEF48C1C845CB700DBD3DB /* Common.swift in Sources */,
 				D9BEF48F1C8473FC00DBD3DB /* NetworkTools.swift in Sources */,
+				D9BEF4911C848DF400DBD3DB /* UserAccount.swift in Sources */,
 				D9B709921C832BF100D46B42 /* UIBarButtonItem-Extension.swift in Sources */,
 				D9C9D1ED1C844FF9008BDCA3 /* WXPopoverAnimator.swift in Sources */,
 				D99974CA1C81C4EB005B0DE7 /* ProfileViewController.swift in Sources */,
