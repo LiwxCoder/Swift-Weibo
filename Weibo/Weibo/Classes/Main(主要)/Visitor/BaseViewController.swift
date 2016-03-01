@@ -12,8 +12,8 @@ class BaseViewController: UITableViewController {
 
     // MARK: ======================================================================
     // MARK: - Property (懒加载,属性监听)
-    /// 登录状态
-    var isLogin = false
+    /// 读取用户信息,如果不存在用户或用户登录过期,则显示访客界面
+    var isLogin = UserAccountViewModel.sharedInstance.isLogin
     var visitorView : VisitorView?
     
     // MARK: ======================================================================

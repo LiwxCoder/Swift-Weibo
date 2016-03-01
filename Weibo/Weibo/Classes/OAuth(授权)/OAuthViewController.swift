@@ -96,7 +96,7 @@ extension OAuthViewController : UIWebViewDelegate {
     
     /// 加载某个页面失败时会调用该方法
     func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
-        WXLog("didFailLoadWithError")
+//        WXLog("didFailLoadWithError\(error)")
         // 加载失败,隐藏指示器
         SVProgressHUD.dismiss()
     }
@@ -123,28 +123,15 @@ extension OAuthViewController : UIWebViewDelegate {
             return true
         }
         
-        // 4.用code换取accessToken
-        NetworkTools.shareInstance.loadAccessToken(code) { (result, error) -> () in
-            
-            // 1.判断是否请求失败
-            if error != nil {
-                WXLog(error)
+        // 4.用code获取accountToken
+        UserAccountViewModel.sharedInstance.loadAccessToken(code) { (isSuccess) -> () in
+            if !isSuccess {
+                WXLog("没有登录成功")
                 return
             }
-            
-            // 2.获取到授权信息
-            guard let resultDict = result else {
-                WXLog("没有获取到授权信息")
-                return
-            }
-            
-            // 3.将字典转成模型对象
-            let account = UserAccount(dict: resultDict)
-            
-            // 4.请求用户信息
-            self.loadUserInfo(account)
-            
         }
+        
+        WXLog("登录成功")
         
         return false
     }
