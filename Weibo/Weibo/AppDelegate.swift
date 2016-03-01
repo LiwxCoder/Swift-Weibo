@@ -13,6 +13,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    /// 通过登录状态判断显示欢迎界面还是显示主界面
+    var defaultController : UIViewController {
+        return UserAccountViewModel.sharedInstance.isLogin ? WelcomeViewController() : UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()!
+    }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
@@ -20,13 +24,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().tintColor = UIColor.orangeColor()
         UINavigationBar.appearance().tintColor = UIColor.orangeColor()
         
-//        // 1.创建window
-//        window = UIWindow(frame: UIScreen.mainScreen().bounds)
-//        window?.backgroundColor = UIColor.redColor()
-//        // 2.设置根控制器
-//        window?.rootViewController = MainViewController()
-//        // 3.设置keyWindow并显示
-//        window?.makeKeyAndVisible()
+        // 1.创建window
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        window?.backgroundColor = UIColor.redColor()
+        // 2.设置根控制器
+        window?.rootViewController = defaultController
+        // 3.设置keyWindow并显示
+        window?.makeKeyAndVisible()
         
         return true
     }

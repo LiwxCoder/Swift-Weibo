@@ -18,6 +18,8 @@
 		D95797141C82AE7000E009E7 /* Null.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D95797121C82AE7000E009E7 /* Null.storyboard */; };
 		D95797171C82AE9D00E009E7 /* DiscoverViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D95797151C82AE9D00E009E7 /* DiscoverViewController.storyboard */; };
 		D957971A1C82AEC100E009E7 /* ProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D95797181C82AEC100E009E7 /* ProfileViewController.storyboard */; };
+		D96A82A61C85F5DF007C543B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96A82A51C85F5DF007C543B /* WelcomeViewController.swift */; };
+		D96A82A81C85F622007C543B /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D96A82A71C85F622007C543B /* WelcomeViewController.xib */; };
 		D99974A91C81B348005B0DE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99974A81C81B348005B0DE7 /* AppDelegate.swift */; };
 		D99974AE1C81B348005B0DE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D99974AC1C81B348005B0DE7 /* Main.storyboard */; };
 		D99974B01C81B348005B0DE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D99974AF1C81B348005B0DE7 /* Assets.xcassets */; };
@@ -54,6 +56,8 @@
 		D95797131C82AE7000E009E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Null.storyboard; sourceTree = "<group>"; };
 		D95797161C82AE9D00E009E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/DiscoverViewController.storyboard; sourceTree = "<group>"; };
 		D95797191C82AEC100E009E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ProfileViewController.storyboard; sourceTree = "<group>"; };
+		D96A82A51C85F5DF007C543B /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		D96A82A71C85F622007C543B /* WelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
 		D99974A51C81B348005B0DE7 /* Weibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D99974A81C81B348005B0DE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D99974AD1C81B348005B0DE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -236,6 +240,8 @@
 				D9BEF4881C8457EB00DBD3DB /* OAuthViewController.xib */,
 				D9BEF4901C848DF400DBD3DB /* UserAccount.swift */,
 				D94BB0531C85AB9D00965400 /* UserAccountViewModel.swift */,
+				D96A82A51C85F5DF007C543B /* WelcomeViewController.swift */,
+				D96A82A71C85F622007C543B /* WelcomeViewController.xib */,
 			);
 			path = "OAuth(授权)";
 			sourceTree = "<group>";
@@ -326,6 +332,7 @@
 				D957970E1C82AE0600E009E7 /* HomeViewController.storyboard in Resources */,
 				D99974B31C81B348005B0DE7 /* LaunchScreen.storyboard in Resources */,
 				D9C9D1E91C843A8C008BDCA3 /* PopoverViewController.xib in Resources */,
+				D96A82A81C85F622007C543B /* WelcomeViewController.xib in Resources */,
 				D99974B01C81B348005B0DE7 /* Assets.xcassets in Resources */,
 				D9BEF48A1C8457EB00DBD3DB /* OAuthViewController.xib in Resources */,
 				D99974AE1C81B348005B0DE7 /* Main.storyboard in Resources */,
@@ -391,6 +398,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9BEF48C1C845CB700DBD3DB /* Common.swift in Sources */,
+				D96A82A61C85F5DF007C543B /* WelcomeViewController.swift in Sources */,
 				D9BEF48F1C8473FC00DBD3DB /* NetworkTools.swift in Sources */,
 				D9BEF4911C848DF400DBD3DB /* UserAccount.swift in Sources */,
 				D9B709921C832BF100D46B42 /* UIBarButtonItem-Extension.swift in Sources */,

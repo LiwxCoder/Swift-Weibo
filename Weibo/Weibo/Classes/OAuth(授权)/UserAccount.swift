@@ -68,18 +68,18 @@ class UserAccount: NSObject, NSCoding {
     }
     
     /// 保存用户信息
-    func saveAccount() {
-        
-        // 1.获取沙盒路径
-        var accountPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first!
-        
-        // 2.拼接路径
-        accountPath = (accountPath as NSString).stringByAppendingPathComponent("account.plist")
-        
-        WXLog(accountPath)
-        
-        // 3.归档
-        NSKeyedArchiver.archiveRootObject(self, toFile: accountPath)
-    }
+//    func saveAccount() {
+//        
+//        // 1.获取沙盒路径
+//        var accountPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first!
+//        
+//        // 2.拼接路径
+//        accountPath = (accountPath as NSString).stringByAppendingPathComponent("account.plist")
+//        
+//        WXLog(accountPath)
+//        
+//        // 3.归档
+//        NSKeyedArchiver.archiveRootObject(self, toFile: accountPath)
+//    }
     
 }

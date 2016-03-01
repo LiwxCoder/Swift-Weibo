@@ -36,6 +36,11 @@ class UserAccountViewModel {
         return account != nil && !isExpired
     }
     
+    /// 头像的url
+    var avatarUrl : NSURL? {
+        return NSURL(string: account?.avatar_large ?? "")
+    }
+    
     /// 用户信息存放路径
     var accountPath : String {
         let accountPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first!
@@ -117,6 +122,7 @@ extension UserAccountViewModel {
             
             // 3.4保存account的信息
             NSKeyedArchiver.archiveRootObject(account, toFile: self.accountPath)
+            self.account = account
             
             // 4.加载完成
             isSuccess(isSuccess: true)

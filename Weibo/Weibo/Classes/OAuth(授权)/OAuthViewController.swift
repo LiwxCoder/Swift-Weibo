@@ -129,49 +129,12 @@ extension OAuthViewController : UIWebViewDelegate {
                 WXLog("没有登录成功")
                 return
             }
+            UIApplication.sharedApplication().keyWindow?.rootViewController = WelcomeViewController()
+            
         }
         
         WXLog("登录成功")
         
         return false
-    }
-    
-    /// 请求用户信息
-    func loadUserInfo(account: UserAccount) {
-    
-        // 1.判断accessToken是否有值
-        guard let accessToken = account.access_token else {
-            WXLog("没有获取到accessToken")
-            return
-        }
-        
-        // 2.判断uid是否有值
-        guard let uid = account.uid else {
-            WXLog("没有获取到uid")
-            return
-        }
-        
-        // 3.发送请求,请求用户信息
-        NetworkTools.shareInstance.loadUserInfo(accessToken, uid: uid) { (result, error) -> () in
-            
-            // 3.1 判断是否请求失败
-            if error != nil {
-                WXLog(error)
-                return
-            }
-            
-            // 3.2 获取结果
-            guard let userInfoDict = result else {
-                WXLog("没有获取到用户信息")
-                return
-            }
-            
-            // 3.3.获取用户信息并且保存头像地址和昵称
-            account.avatar_large = userInfoDict["avatar_large"] as? String
-            account.screen_name = userInfoDict["screen_name"] as? String
-            
-            // 3.4.保存account信息
-            account.saveAccount()
-        }
     }
 }
