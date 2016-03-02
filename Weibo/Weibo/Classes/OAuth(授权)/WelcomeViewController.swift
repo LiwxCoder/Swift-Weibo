@@ -20,7 +20,6 @@ class WelcomeViewController: UIViewController {
         // 1.设置用户信息
         nameLabel.text = UserAccountViewModel.sharedInstance.account?.screen_name
         iconView.sd_setImageWithURL(UserAccountViewModel.sharedInstance.avatarUrl, placeholderImage: UIImage(named: "avatar_default_big"))
-        WXLog(UserAccountViewModel.sharedInstance.account)
         
         // 2.设置用户圆形头像,也可以在storyboard中使用KVC设置
         iconView.layer.cornerRadius = iconView.frame.size.width * 0.5

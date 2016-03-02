@@ -42,6 +42,9 @@ class Status: NSObject {
     /// 微博来源数据处理
     var sourceText : String?
     
+    /// 用户
+    var user : User?
+    
     // MARK: - 计算属性
     var createdAtText : String? {
         guard let tempCreatedAt = created_at else {
@@ -56,6 +59,10 @@ class Status: NSObject {
         super.init()
         
         setValuesForKeysWithDictionary(dict)
+        
+        if let userDict = dict["user"] as? [String : AnyObject] {
+            user = User(dict: userDict)
+        }
     }
     
     /// 重写forUndefinedKey
