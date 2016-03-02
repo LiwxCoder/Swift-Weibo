@@ -13,6 +13,7 @@
 		D90BF3491C83033900EE66BD /* VisitorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90BF3481C83033900EE66BD /* VisitorView.xib */; };
 		D90D81371C82B50E0011F081 /* UIButton-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90D81361C82B50E0011F081 /* UIButton-Extension.swift */; };
 		D91E9CFD1C87332200FB9935 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91E9CFC1C87332200FB9935 /* User.swift */; };
+		D91E9D011C873C3A00FB9935 /* StatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91E9D001C873C3A00FB9935 /* StatusViewModel.swift */; };
 		D94BB0541C85AB9D00965400 /* UserAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94BB0531C85AB9D00965400 /* UserAccountViewModel.swift */; };
 		D957970E1C82AE0600E009E7 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D957970C1C82AE0600E009E7 /* HomeViewController.storyboard */; };
 		D95797111C82AE3700E009E7 /* MessageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D957970F1C82AE3700E009E7 /* MessageViewController.storyboard */; };
@@ -54,6 +55,7 @@
 		D90BF3481C83033900EE66BD /* VisitorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VisitorView.xib; sourceTree = "<group>"; };
 		D90D81361C82B50E0011F081 /* UIButton-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton-Extension.swift"; sourceTree = "<group>"; };
 		D91E9CFC1C87332200FB9935 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D91E9D001C873C3A00FB9935 /* StatusViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewModel.swift; sourceTree = "<group>"; };
 		D94BB0531C85AB9D00965400 /* UserAccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccountViewModel.swift; sourceTree = "<group>"; };
 		D957970D1C82AE0600E009E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/HomeViewController.storyboard; sourceTree = "<group>"; };
 		D95797101C82AE3700E009E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MessageViewController.storyboard; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 				D9B709931C83386600D46B42 /* TitleButton.swift */,
 				D9B13BA21C87027D00B22993 /* Status.swift */,
 				D91E9CFC1C87332200FB9935 /* User.swift */,
+				D91E9D001C873C3A00FB9935 /* StatusViewModel.swift */,
 			);
 			path = "Home(首页)";
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				D9C9D1EB1C84421A008BDCA3 /* WXPresentationController.swift in Sources */,
 				D99974C61C81C4C8005B0DE7 /* MessageViewController.swift in Sources */,
 				D94BB0541C85AB9D00965400 /* UserAccountViewModel.swift in Sources */,
+				D91E9D011C873C3A00FB9935 /* StatusViewModel.swift in Sources */,
 				D99974C21C81B78A005B0DE7 /* MainViewController.swift in Sources */,
 				D90BF3451C83012300EE66BD /* BaseViewController.swift in Sources */,
 				D9B13BA51C87070800B22993 /* String-Extension.swift in Sources */,

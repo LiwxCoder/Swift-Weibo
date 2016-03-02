@@ -143,8 +143,8 @@ extension HomeViewController {
         
         // 2.设置cell数据
         let status = statuses[indexPath.row]
-        cell?.textLabel?.text = status.createdAtText
-        cell?.detailTextLabel?.text = status.sourceText
+        cell?.textLabel?.text = status.user?.screen_name
+        cell?.detailTextLabel?.text = status.source
         
         return cell!
     }
