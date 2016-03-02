@@ -13,6 +13,9 @@ class HomeViewController: BaseViewController {
     // MARK: ======================================================================
     // MARK: - Property (懒加载,属性监听)
     
+    /// 微博数据
+    lazy var statuses : [Status] = [Status]()
+    
     /// 懒加载动画执行代理属性
     lazy var popoverAnimator : WXPopoverAnimator = {
         
@@ -51,6 +54,8 @@ class HomeViewController: BaseViewController {
         // 2.如果已经登录,设置首页导航栏左右侧按钮
         setupHomeNavitationItems()
         
+        // 3.请求微博数据
+        loadStatusData()
     }
     
     /// 设置主页导航栏按钮
@@ -64,6 +69,32 @@ class HomeViewController: BaseViewController {
         
         // 3.设置标题按钮
        navigationItem.titleView = titleBtn
+    }
+    
+    // MARK: ======================================================================
+    // MARK: - Private method (业务和逻辑功能相关)
+    
+    /// 请求网络数据
+    private func loadStatusData() {
+        
+        // 请求网络属数据
+        NetworkTools.shareInstance.loadStatusData { (result, error) -> () in
+            
+            // 1.错误校验
+            if error != nil {
+                WXLog(error)
+                return
+            }
+            
+            // 2.获取结果
+            for statusDict in result! {
+                self.statuses.append(Status(dict: statusDict))
+            }
+            
+            // 3.刷新表格
+            self.tableView.reloadData()
+        }
+        
     }
     
     // MARK: ======================================================================
@@ -99,3 +130,22 @@ class HomeViewController: BaseViewController {
     
 }
 
+// MARK: - TableView的数据源
+extension HomeViewController {
+
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return statuses.count
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        // 1.storyboard中设置cell
+        let cell = tableView.dequeueReusableCellWithIdentifier("homeCell")
+        
+        // 2.设置cell数据
+        let status = statuses[indexPath.row]
+        cell?.textLabel?.text = status.createdAtText
+        cell?.detailTextLabel?.text = status.source
+        
+        return cell!
+    }
+}

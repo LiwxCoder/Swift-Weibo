@@ -29,6 +29,8 @@
 		D99974C81C81C4DD005B0DE7 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99974C71C81C4DD005B0DE7 /* DiscoverViewController.swift */; };
 		D99974CA1C81C4EB005B0DE7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99974C91C81C4EB005B0DE7 /* ProfileViewController.swift */; };
 		D99974CC1C81C50C005B0DE7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99974CB1C81C50C005B0DE7 /* HomeViewController.swift */; };
+		D9B13BA31C87027D00B22993 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B13BA21C87027D00B22993 /* Status.swift */; };
+		D9B13BA51C87070800B22993 /* String-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B13BA41C87070800B22993 /* String-Extension.swift */; };
 		D9B709921C832BF100D46B42 /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B709911C832BF100D46B42 /* UIBarButtonItem-Extension.swift */; };
 		D9B709941C83386600D46B42 /* TitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B709931C83386600D46B42 /* TitleButton.swift */; };
 		D9BEF4891C8457EB00DBD3DB /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BEF4871C8457EB00DBD3DB /* OAuthViewController.swift */; };
@@ -69,6 +71,8 @@
 		D99974C71C81C4DD005B0DE7 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		D99974C91C81C4EB005B0DE7 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D99974CB1C81C50C005B0DE7 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D9B13BA21C87027D00B22993 /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		D9B13BA41C87070800B22993 /* String-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String-Extension.swift"; sourceTree = "<group>"; };
 		D9B709911C832BF100D46B42 /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
 		D9B709931C83386600D46B42 /* TitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleButton.swift; sourceTree = "<group>"; };
 		D9BEF4871C8457EB00DBD3DB /* OAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +130,7 @@
 			children = (
 				D90D81361C82B50E0011F081 /* UIButton-Extension.swift */,
 				D9B709911C832BF100D46B42 /* UIBarButtonItem-Extension.swift */,
+				D9B13BA41C87070800B22993 /* String-Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -190,6 +195,7 @@
 				D99974CB1C81C50C005B0DE7 /* HomeViewController.swift */,
 				D957970C1C82AE0600E009E7 /* HomeViewController.storyboard */,
 				D9B709931C83386600D46B42 /* TitleButton.swift */,
+				D9B13BA21C87027D00B22993 /* Status.swift */,
 			);
 			path = "Home(首页)";
 			sourceTree = "<group>";
@@ -399,6 +405,7 @@
 			files = (
 				D9BEF48C1C845CB700DBD3DB /* Common.swift in Sources */,
 				D96A82A61C85F5DF007C543B /* WelcomeViewController.swift in Sources */,
+				D9B13BA31C87027D00B22993 /* Status.swift in Sources */,
 				D9BEF48F1C8473FC00DBD3DB /* NetworkTools.swift in Sources */,
 				D9BEF4911C848DF400DBD3DB /* UserAccount.swift in Sources */,
 				D9B709921C832BF100D46B42 /* UIBarButtonItem-Extension.swift in Sources */,
@@ -414,6 +421,7 @@
 				D94BB0541C85AB9D00965400 /* UserAccountViewModel.swift in Sources */,
 				D99974C21C81B78A005B0DE7 /* MainViewController.swift in Sources */,
 				D90BF3451C83012300EE66BD /* BaseViewController.swift in Sources */,
+				D9B13BA51C87070800B22993 /* String-Extension.swift in Sources */,
 				D90BF3471C83032B00EE66BD /* VisitorView.swift in Sources */,
 				D99974C81C81C4DD005B0DE7 /* DiscoverViewController.swift in Sources */,
 				D99974CC1C81C50C005B0DE7 /* HomeViewController.swift in Sources */,

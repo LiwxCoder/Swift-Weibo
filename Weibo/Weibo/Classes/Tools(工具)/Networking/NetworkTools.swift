@@ -97,3 +97,46 @@ extension NetworkTools {
     }
 }
 
+/// 请求微博数据
+extension NetworkTools {
+
+   // 请求微博数据
+    func loadStatusData(isFinished: (result: [[String : AnyObject]]?, error: NSError?) -> ()) {
+    
+        // 1.获取urlString
+        let urlString = "2/statuses/home_timeline.json"
+        
+        // 2.拼接参数
+        guard let access_token = UserAccountViewModel.sharedInstance.account?.access_token else {
+            return
+        }
+        let parameters = ["access_token" : access_token]
+        
+        // 3.发送请求
+        request(.GET, urlString: urlString, parameters: parameters) { (result, error) -> () in
+            
+            // 3.1 错误校验
+            if error != nil {
+                isFinished(result: nil, error: error)
+                return
+            }
+            
+            // 3.2 将AnyObject转成字典
+            guard let resultDict = result else {
+                isFinished(result: nil, error: error)
+                return
+            }
+            
+            // 3.3 从resultDict字典中获取字典数组
+            guard let resultArray = resultDict["statuses"] as? [[String : AnyObject]] else {
+                isFinished(result: nil, error: NSError(domain: "com.liwx.com", code: 1002, userInfo: ["errorInfo" : "从字典中通过statuses取出字典数组失败"]))
+                return
+            }
+            
+            // 3.4 回调结果
+            isFinished(result: resultArray, error: nil)
+        }
+    }
+}
+
+
