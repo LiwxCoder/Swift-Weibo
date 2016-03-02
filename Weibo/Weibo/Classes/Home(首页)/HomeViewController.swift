@@ -14,7 +14,7 @@ class HomeViewController: BaseViewController {
     // MARK: - Property (懒加载,属性监听)
     
     /// 微博数据
-    lazy var statuses : [Status] = [Status]()
+    lazy var statusViewModels : [StatusViewModel] = [StatusViewModel]()
     
     /// 懒加载动画执行代理属性
     lazy var popoverAnimator : WXPopoverAnimator = {
@@ -88,7 +88,7 @@ class HomeViewController: BaseViewController {
             
             // 2.获取结果
             for statusDict in result! {
-                self.statuses.append(Status(dict: statusDict))
+                self.statusViewModels.append(StatusViewModel(status: Status(dict: statusDict)))
             }
             
             // 3.刷新表格
@@ -134,7 +134,7 @@ class HomeViewController: BaseViewController {
 extension HomeViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return statuses.count
+        return statusViewModels.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -142,9 +142,9 @@ extension HomeViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("homeCell")
         
         // 2.设置cell数据
-        let status = statuses[indexPath.row]
-        cell?.textLabel?.text = status.user?.screen_name
-        cell?.detailTextLabel?.text = status.source
+        let statusViewModel = statusViewModels[indexPath.row]
+        cell?.textLabel?.text = statusViewModel.createdAtText
+        cell?.detailTextLabel?.text = statusViewModel.status?.user?.screen_name
         
         return cell!
     }
