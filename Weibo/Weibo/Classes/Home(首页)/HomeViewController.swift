@@ -91,7 +91,11 @@ class HomeViewController: BaseViewController {
                 self.statusViewModels.append(StatusViewModel(status: Status(dict: statusDict)))
             }
             
-            // 3.刷新表格
+            // 3.设置tableView的估算高度
+            self.tableView.estimatedRowHeight = 200
+            self.tableView.rowHeight = UITableViewAutomaticDimension
+            
+            // 4.刷新表格
             self.tableView.reloadData()
         }
         
@@ -139,12 +143,11 @@ extension HomeViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         // 1.storyboard中设置cell
-        let cell = tableView.dequeueReusableCellWithIdentifier("homeCell")
+        let cell = tableView.dequeueReusableCellWithIdentifier("homeCell") as? HomeCell
         
         // 2.设置cell数据
-        let statusViewModel = statusViewModels[indexPath.row]
-        cell?.textLabel?.text = statusViewModel.createdAtText
-        cell?.detailTextLabel?.text = statusViewModel.status?.user?.screen_name
+        cell?.statusViewModel = statusViewModels[indexPath.row]
+        
         
         return cell!
     }

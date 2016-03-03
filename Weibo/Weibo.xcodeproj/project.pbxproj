@@ -14,6 +14,7 @@
 		D90D81371C82B50E0011F081 /* UIButton-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90D81361C82B50E0011F081 /* UIButton-Extension.swift */; };
 		D91E9CFD1C87332200FB9935 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91E9CFC1C87332200FB9935 /* User.swift */; };
 		D91E9D011C873C3A00FB9935 /* StatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91E9D001C873C3A00FB9935 /* StatusViewModel.swift */; };
+		D91E9D031C88196200FB9935 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91E9D021C88196200FB9935 /* HomeCell.swift */; };
 		D94BB0541C85AB9D00965400 /* UserAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94BB0531C85AB9D00965400 /* UserAccountViewModel.swift */; };
 		D957970E1C82AE0600E009E7 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D957970C1C82AE0600E009E7 /* HomeViewController.storyboard */; };
 		D95797111C82AE3700E009E7 /* MessageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D957970F1C82AE3700E009E7 /* MessageViewController.storyboard */; };
@@ -56,6 +57,7 @@
 		D90D81361C82B50E0011F081 /* UIButton-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton-Extension.swift"; sourceTree = "<group>"; };
 		D91E9CFC1C87332200FB9935 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D91E9D001C873C3A00FB9935 /* StatusViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewModel.swift; sourceTree = "<group>"; };
+		D91E9D021C88196200FB9935 /* HomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		D94BB0531C85AB9D00965400 /* UserAccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccountViewModel.swift; sourceTree = "<group>"; };
 		D957970D1C82AE0600E009E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/HomeViewController.storyboard; sourceTree = "<group>"; };
 		D95797101C82AE3700E009E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MessageViewController.storyboard; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				D9C9D1E51C8437A5008BDCA3 /* UIPopover */,
 				D99974CB1C81C50C005B0DE7 /* HomeViewController.swift */,
 				D957970C1C82AE0600E009E7 /* HomeViewController.storyboard */,
+				D91E9D021C88196200FB9935 /* HomeCell.swift */,
 				D9B709931C83386600D46B42 /* TitleButton.swift */,
 				D9B13BA21C87027D00B22993 /* Status.swift */,
 				D91E9CFC1C87332200FB9935 /* User.swift */,
@@ -423,6 +426,7 @@
 				D9C9D1E81C843A8C008BDCA3 /* PopoverViewController.swift in Sources */,
 				D9B709941C83386600D46B42 /* TitleButton.swift in Sources */,
 				D9C9D1EB1C84421A008BDCA3 /* WXPresentationController.swift in Sources */,
+				D91E9D031C88196200FB9935 /* HomeCell.swift in Sources */,
 				D99974C61C81C4C8005B0DE7 /* MessageViewController.swift in Sources */,
 				D94BB0541C85AB9D00965400 /* UserAccountViewModel.swift in Sources */,
 				D91E9D011C873C3A00FB9935 /* StatusViewModel.swift in Sources */,
