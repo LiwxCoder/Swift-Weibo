@@ -139,6 +139,7 @@
                                         </view>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7gj-UG-lhL" userLabel="微博配图">
                                             <rect key="frame" x="10" y="125.5" width="580" height="120"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="120" id="oLd-B7-xZ6"/>
                                             </constraints>
@@ -149,14 +150,28 @@
                                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                             </collectionViewFlowLayout>
                                             <cells>
-                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="PoY-eN-qz3">
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="picCell" id="PoY-eN-qz3" customClass="PicCollectionViewCell" customModule="Weibo" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                         <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KaM-D1-IYs">
+                                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                            </imageView>
+                                                        </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     </view>
+                                                    <constraints>
+                                                        <constraint firstItem="KaM-D1-IYs" firstAttribute="top" secondItem="PoY-eN-qz3" secondAttribute="top" id="Alz-m0-lRz"/>
+                                                        <constraint firstItem="KaM-D1-IYs" firstAttribute="leading" secondItem="PoY-eN-qz3" secondAttribute="leading" id="CHd-eF-lhT"/>
+                                                        <constraint firstAttribute="bottom" secondItem="KaM-D1-IYs" secondAttribute="bottom" id="CuP-es-Zj8"/>
+                                                        <constraint firstAttribute="trailing" secondItem="KaM-D1-IYs" secondAttribute="trailing" id="O4e-GD-XpV"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <outlet property="picImageView" destination="KaM-D1-IYs" id="QJu-dh-WFv"/>
+                                                    </connections>
                                                 </collectionViewCell>
                                             </cells>
                                         </collectionView>
@@ -198,6 +213,8 @@
                                     <outlet property="contentLabel" destination="WYZ-Hf-qSC" id="lcC-Gl-p6J"/>
                                     <outlet property="createTimeLabel" destination="djN-TC-stI" id="CY4-ix-bJT"/>
                                     <outlet property="iconView" destination="riM-Z9-LP4" id="IuC-Vp-dG5"/>
+                                    <outlet property="picCollectionView" destination="7gj-UG-lhL" id="iUC-bk-WTa"/>
+                                    <outlet property="picCollectionViewBottomCons" destination="Czf-ri-KZh" id="ygM-qv-plV"/>
                                     <outlet property="picCollectionViewHCons" destination="oLd-B7-xZ6" id="fXe-xT-JQ5"/>
                                     <outlet property="picCollectionViewRCons" destination="vXs-BB-0kc" id="y6x-uE-2g9"/>
                                     <outlet property="screenNameLabel" destination="ELw-Sn-vJa" id="Bu7-IK-6O7"/>
