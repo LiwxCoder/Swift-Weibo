@@ -31,6 +31,8 @@ class StatusViewModel {
     
     /// 头像的URL
     var iconURL : NSURL?
+    /// 微博配图的URLs
+    var picURLs : [NSURL] = [NSURL]()
     
     // MARK: - 构造函数
     init(status: Status) {
@@ -76,6 +78,20 @@ class StatusViewModel {
         // 5.头像的URL
         if let iconURLString = tempStatus.user?.profile_image_url {
             iconURL = NSURL(string: iconURLString)
+        }
+        
+        // 6.微博配图URL处理
+        if let picURLStringDicts = status.pic_urls {
+            // 6.1.遍历数组字典,拿到每一个字典
+            for picURLStringDict in picURLStringDicts {
+                
+                // 6.2.在字典中根据thumbnail_pic取出对应的urlString
+                guard let picURLString = picURLStringDict["thumbnail_pic"] as? String else {
+                    continue
+                }
+                // 6.3.创建对应的URL,并且放入到picURLs数组
+                picURLs.append(NSURL(string: picURLString)!)
+            }
         }
     }
     

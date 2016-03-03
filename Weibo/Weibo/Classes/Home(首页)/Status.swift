@@ -24,8 +24,11 @@ class Status: NSObject {
     var source : String?
     /// 用户
     var user : User?
+    /// 微博的所有配图
+    var pic_urls : [[String : AnyObject]]?
     
-        /// 自定义构造函数
+    
+    /// 自定义构造函数
     init(dict: [String : AnyObject]) {
         super.init()
         
