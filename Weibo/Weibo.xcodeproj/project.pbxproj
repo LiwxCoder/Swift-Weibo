@@ -198,8 +198,8 @@
 			isa = PBXGroup;
 			children = (
 				D9C9D1E51C8437A5008BDCA3 /* UIPopover */,
-				D99974CB1C81C50C005B0DE7 /* HomeViewController.swift */,
 				D957970C1C82AE0600E009E7 /* HomeViewController.storyboard */,
+				D99974CB1C81C50C005B0DE7 /* HomeViewController.swift */,
 				D91E9D021C88196200FB9935 /* HomeCell.swift */,
 				D9B709931C83386600D46B42 /* TitleButton.swift */,
 				D9B13BA21C87027D00B22993 /* Status.swift */,

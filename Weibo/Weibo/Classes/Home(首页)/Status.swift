@@ -26,6 +26,8 @@ class Status: NSObject {
     var user : User?
     /// 微博的所有配图
     var pic_urls : [[String : AnyObject]]?
+    /// 转发的微博
+    var retweeted_status : Status?
     
     
     /// 自定义构造函数
@@ -36,6 +38,10 @@ class Status: NSObject {
         
         if let userDict = dict["user"] as? [String : AnyObject] {
             user = User(dict: userDict)
+        }
+        
+        if let retweetedStatusDict = dict["retweeted_status"] as? [String : AnyObject] {
+            retweeted_status = Status(dict: retweetedStatusDict)
         }
     }
     

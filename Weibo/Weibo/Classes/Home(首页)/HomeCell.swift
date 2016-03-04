@@ -23,6 +23,10 @@ class HomeCell: UITableViewCell {
     @IBOutlet weak var sourceLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
     
+    /// 转发微博的正文
+    @IBOutlet weak var retweetTextLabel: UILabel!
+    
+    
     /// UICollectionView高度约束
     @IBOutlet weak var picCollectionViewHCons: NSLayoutConstraint!
     /// UICollectionView右边间距约束
@@ -66,6 +70,9 @@ class HomeCell: UITableViewCell {
             
             // 9.刷新UICollectionView
             picCollectionView.reloadData()
+            
+            // 10.展示转发的微博
+            retweetTextLabel.text = statusViewModel?.status?.retweeted_status?.text
         }
     
     }
