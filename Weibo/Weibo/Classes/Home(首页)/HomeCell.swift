@@ -25,6 +25,8 @@ class HomeCell: UITableViewCell {
     
     /// 转发微博的正文
     @IBOutlet weak var retweetTextLabel: UILabel!
+    /// 转发微博的背景
+    @IBOutlet weak var retweetedBgView: UIView!
     
     
     /// UICollectionView高度约束
@@ -33,6 +35,8 @@ class HomeCell: UITableViewCell {
     @IBOutlet weak var picCollectionViewRCons: NSLayoutConstraint!
     /// UICollectionView底部间距约束
     @IBOutlet weak var picCollectionViewBottomCons: NSLayoutConstraint!
+    /// 正文底部和转发微博正文的约束
+    @IBOutlet weak var contentBottomCons: NSLayoutConstraint!
     
     /// 用于展示图片的collectionView
     @IBOutlet weak var picCollectionView: UICollectionView!
@@ -71,8 +75,21 @@ class HomeCell: UITableViewCell {
             // 9.刷新UICollectionView
             picCollectionView.reloadData()
             
-            // 10.展示转发的微博
-            retweetTextLabel.text = statusViewModel?.status?.retweeted_status?.text
+            // 10.展示转发的微博 拼接@: 
+            if let retweetedText = statusViewModel?.status?.retweeted_status?.text, let screentName = statusViewModel?.status?.retweeted_status?.user?.screen_name {
+                retweetTextLabel.text = "@" + screentName + ": " + retweetedText
+            } else {
+                retweetTextLabel.text = nil
+            }
+            
+            // 11.如果有转发微博:1.转发背景显示
+            if statusViewModel?.status?.retweeted_status != nil {
+                retweetedBgView.hidden = false
+                contentBottomCons.constant = 10
+            } else {
+                retweetedBgView.hidden = true
+                contentBottomCons.constant = 0
+            }
         }
     
     }

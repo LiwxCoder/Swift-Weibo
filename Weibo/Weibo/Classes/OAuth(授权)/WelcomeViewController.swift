@@ -30,7 +30,7 @@ class WelcomeViewController: UIViewController {
         // Velocity : 初始化速度
         // 在Swift中,如果一个枚举类型不设置值: []/UIViewAnimationOptions(rawValue: 0)
         iconViewBottomCons.constant = 500
-        UIView.animateWithDuration(2.0, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 5.0, options: [], animations: { () -> Void in
+        UIView.animateWithDuration(1.0, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 5.0, options: [], animations: { () -> Void in
                 // 强制刷新
                 self.view.layoutIfNeeded()
             }) { (isFinished) -> Void in

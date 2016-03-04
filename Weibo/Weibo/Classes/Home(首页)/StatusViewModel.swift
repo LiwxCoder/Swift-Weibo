@@ -81,7 +81,9 @@ class StatusViewModel {
         }
         
         // 6.微博配图URL处理
-        if let picURLStringDicts = status.pic_urls {
+        let tempPicURLStringDicts = status.pic_urls?.count != 0 ? status.pic_urls : status.retweeted_status?.pic_urls
+        
+        if let picURLStringDicts = tempPicURLStringDicts {
             // 6.1.遍历数组字典,拿到每一个字典
             for picURLStringDict in picURLStringDicts {
                 
